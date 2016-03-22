@@ -1,0 +1,51 @@
+body{background-image: url('/img/key1.jpg'); background-repeat: no-repeat;background-size: 100%;background-position:top center;background-attachment:fixed;background-size:cover;padding-top: 40px;}
+h1,h2,h3,h4,h5,h5,p,div{font-family: serif}
+li a{color:black}
+nav ul li{list-style:none; display:inline-block; margin-top:-15px; font-family:serif; font-size:5em;}
+nav{background-color: rgba(255, 255, 255, 0.5);}
+.hmHead{background-color:rgba(0, 0, 0, 0.7);}
+#boxes{margin-top: 40px;}
+#name{font-size: 3.3em; }
+#jobRole{color: white;font-size: 24px;}
+@media (min-width:1024px){#name{font-size: 4.3em;}#jobRole{font-size: 28px;}}
+.proj{height:100px;width: 300px;background-color:rgba(255, 255, 255, 0.5);margin:10px; }
+.xpText span{font-weight:bold;font-size: 1.7em}
+.xpText p{font-size: 20px;color:white;}
+.xpText{background-color:rgba(0, 0, 0, 0.7);padding-bottom: 5px;}
+/*.proj:hover { {display: inherit}}*/
+.xp{color:#000;font-size:2em;font-weight:bold;padding-top:40px 20px;margin-bottom: 40px;}
+/*.xpText p a{color:black}*/
+.color{color:black;font-size: 2em}
+.color:hover{color:#333}
+.proj:hover #tPic {display: inline}
+#tPic {display: none}
+/*testing ranges*/
+
+.travstate {transition:2.9s linear all;color:transparent;}
+.micdoja {transition:2.9s linear all;color:transparent;}
+.blogs {transition:2.9s linear all;color:transparent;}
+.chats {transition:2.9s linear all;color:transparent;}
+
+.travstate.trav-remove {background:red;color:black;}
+.micdoja.mic-remove {background:red;color:black;}
+.blogs.blog-remove {background:red;color:black;}
+.chats.chat-remove {background:red;color:black;}
+
+
+/*.highlight{*/
+  transition: all linear 0.5s;
+  /*background-color: lightblue;*/
+  height: 100px;
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+/*.ng-hide {*/
+  height: 0;
+  width: 0;
+  background-color: transparent;
+  top:-200px;
+  left: 200px;
+}
+/*@media (min-width: 600px) and (max-width: 959px) { body{background-image:none;}}*/

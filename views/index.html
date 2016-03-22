@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<title>Micah Dunson | Web Developer </title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Bootstrap -->
+  	<link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css'>
+		<!-- Angular-Material-CSS -->
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/0.11.4/angular-material.css">
+    <!-- Bootstrap Font: Awesome -->
+  	<link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.min.css'>
+		<!-- Bootstrap Theme -->
+		<link rel="stylesheet" type="text/css" href="/css/bootstrap_theme.css">
+		<!-- Custom CSS -->
+		<link rel="stylesheet" type="text/css" href="/css/site.css">
+		<!-- Side Nav CSS -->
+		<link rel="stylesheet" type="text/css" href="/css/side-nav.css">
+		<style media="screen">
+			/*MOBILE VIEW*/
+			@media (max-width:768px){#NAV li{display:none;}}
+
+			/* TABLET & DESKTOP NAV VIEW */
+			@media (min-width:768px) {
+				#NAV li{ display:inline-block;list-style:none;padding:20px 30px 5px 30px;font-size: 2.75em;}
+				#sideNavContainer{display: none;}
+			}
+			@media (min-width:1024px) {#NAV li{font-size: 2.25em;}}
+			@media (min-width:1440px) {#NAV li{font-size: 2.75em;}}
+		</style>
+	</head>
+	<body ng-controller='HomeController as vm'>
+
+		<!-- Mobile view side-nav -->
+		<div id='sideNavContainer' class="container">
+			<div id="mySidenav" class="sidenav">
+	      <a href="javascript:void(0)" class="closebtn" ng-click="vm.closeNav()">×</a>
+	      <a href="#" ui-sref='Home' ng-click="vm.closeNav()">Home</a>
+	      <a href="#" ui-sref='Experience' ng-click="vm.closeNav()">Experience</a>
+	      <a href="#" ui-sref='Contact'ng-click="vm.closeNav()" >Contact</a>
+	    </div>
+			<!-- Use any element to open/show the overlay navigation menu -->
+			<span style="font-size:30px;cursor:pointer;" ng-click="vm.openNav()">☰</span>
+			<!-- <span onclick="openNav()">open</span> -->
+		</div>
+		<div class="mainNav text-center">
+			<nav>
+				<ul id="NAV">
+					<li><a href="#"ui-sref='Home'>Home</a></li>
+					<li><a href="#"ui-sref='Experience'>Experience</a></li>
+					<li><a href="#"ui-sref='Contact'>Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+
+
+
+		<ui-view></ui-view>
+
+
+		<!-- Ext Libs -->
+		<!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+		<!-- Angular -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular.min.js"></script>
+		<!-- Angular-UI-Router -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+
+		<!--  Angular Material -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/0.11.4/angular-material.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-aria.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-animate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.14.3/ui-bootstrap.min.js"></script>
+		<!-- Global Src -->
+		<script src="/javascript/app.js"></script>
+		<!-- Factories -->
+		<script src="/javascript/services/HomeFactory.js"></script>
+		<!-- Controllers -->
+		<script src="/javascript/controllers/HomeController.js"></script>
+		<!-- Custom Addition JS -->
+		<!-- <script src="/javascript/custom.js"></script> -->
+	</body>
+</html>
