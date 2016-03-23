@@ -1,9 +1,18 @@
 <div ng-controller="HomeController as vm">
+	<style media="screen">
+	/*#jobRole{font-size: 50px;}*/
+	@media (min-width: 1024px){#name {font-size: 6.3em;}#jobRole{font-size: 40px;}}
+	@media (min-width: 768px){#name {font-size: 5.3em;}#jobRole{font-size: 30px;}}
+
+	</style>
 	<div class="container">
 		<div class="row text-center">
 			<div class="hmHead">
 				<h1 id="name"class="animated  fadeInLeft">{{vm.title}}</h1>
-					<p id="jobRole" class="animated  fadeInRight">MEAN-Stack Developer</p>
+					<p id="jobRole" class="animated  fadeInRight">MEAN-Stack Developer<br>
+						<a href="http://github.com/M-Doja" target="_blank"><img src="/img/GH_icon.png" width='25' alt="Github Icon" /></a>
+						<a href="https://www.linkedin.com/in/micahdunson" target="_blank"><img src="/img/LK_icon.png" width='30' alt="LinkedIn Icon" /></a></p>
+
 			</div>
 		</div>
 
