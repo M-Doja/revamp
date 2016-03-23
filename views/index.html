@@ -21,6 +21,7 @@
 		<link rel="stylesheet" type="text/css" href="/css/site.css">
 		<!-- Side Nav CSS -->
 		<link rel="stylesheet" type="text/css" href="/css/side-nav.css">
+
 		<style media="screen">
 			/*MOBILE VIEW*/
 			@media (max-width:768px){#NAV li{display:none;}}
@@ -37,26 +38,31 @@
 	<body ng-controller='HomeController as vm'>
 		<div id="background-img"></div>
 		<!-- Mobile view side-nav -->
-		<div id='sideNavContainer' class="container">
-			<div id="mySidenav" class="sidenav">
-	      <a href="javascript:void(0)" class="closebtn" ng-click="vm.closeNav()">×</a>
-	      <a href="#" ui-sref='Home' ng-click="vm.closeNav()">Home</a>
-	      <a href="#" ui-sref='Experience' ng-click="vm.closeNav()">Experience</a>
-	      <a href="#" ui-sref='Contact'ng-click="vm.closeNav()" >Contact</a>
-	    </div>
-			<!-- Use any element to open/show the overlay navigation menu -->
-			<span style="font-size:30px;cursor:pointer;" ng-click="vm.openNav()">☰</span>
-			<!-- <span onclick="openNav()">open</span> -->
-		</div>
-		<div class="mainNav text-center">
-			<nav>
-				<ul id="NAV">
-					<li><a href="#home"ui-sref='Home'>Home</a></li>
-					<li><a href="#"ui-sref='Experience'>Experience</a></li>
-					<li><a href="#"ui-sref='Contact'>Contact</a></li>
-				</ul>
-			</nav>
-		</div>
+		<md-input-container>
+			<div id='sideNavContainer' class="container">
+				<div id="mySidenav" class="sidenav">
+		      <a href="javascript:void(0)" class="closebtn" ng-click="vm.closeNav()">×</a>
+		      <a href="#" ui-sref='Home' ng-click="vm.closeNav()">Home</a>
+		      <a href="#" ui-sref='Experience' ng-click="vm.closeNav()">Experience</a>
+		      <a href="#" ui-sref='Contact'ng-click="vm.closeNav()" >Contact</a>
+		    </div>
+				<!-- Use any element to open/show the overlay navigation menu -->
+				<span style="font-size:30px;cursor:pointer;" ng-click="vm.openNav()">☰</span>
+				<!-- <span onclick="openNav()">open</span> -->
+			</div>
+		</md-input-container>
+		<md-input-container>
+			<div class="mainNav text-center">
+				<nav>
+					<ul id="NAV" class="clearfix">
+						<li><a href="#"ui-sref='Home'>Home</a></li>
+						<li><a href="#"ui-sref='Experience'>Experience</a></li>
+						<li><a href="#"ui-sref='Contact'>Contact</a></li>
+
+					</ul>
+				</nav>
+			</div>
+		</md-input-container>
 
 
 

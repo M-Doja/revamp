@@ -1,7 +1,7 @@
-/* For body and background img */
-body{background-image: url('/img/key1.jpg') no-repeat center center; background-size:100%;background-attachment:fixed;background-size:cover;padding-top: 40px;overflow: scroll;width: 100%;top: 0;left: 0;bottom: -80px;position: relative; z-index: -1;}
-#background-img {width: 100%; top: 0;left: 0; bottom: -80px; position: fixed; z-index: -1;
-  background: url("/img/key1.jpg") no-repeat center center; background-size: cover;}
+/* For bdy and background img */
+body{background-size:100%; background-attachment:fixed; background-size:cover; padding-top:40px; overflow:scroll;z-index: 1;}
+
+#background-img {width: 100%; top: 0;left: 0; bottom: -80px; position: fixed; background: url("/img/key1.jpg") no-repeat center center;background-size: cover;z-index: -1}
 
 /**/
 h1,h2,h3,h4,h5,h5,p,div{font-family: serif}
@@ -43,6 +43,7 @@ nav{background-color: rgba(255, 255, 255, 0.5);}
 #pTag{background-color:rgba(0, 0, 0, 0.7);color:white;padding:3px}
 #jobRole img{margin:0 10px;}
 #jobRole,#name{-webkit-animation-duration: 3s;-webkit-animation-delay: 1s;-webkit-animation-iteration-count: 1;}
+footer{background-color:rgba(0, 0, 0, 0.7);}
 .MobileBtn{color:#fff}
 .pageName{font-size: 4em;color: #fff;background-color:rgba(0, 0, 0, 0.7);}
 .icon{-webkit-animation-duration: 3s;-webkit-animation-delay: 2s;-webkit-animation-iteration-count: 1;}
