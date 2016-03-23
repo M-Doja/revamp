@@ -2,12 +2,14 @@
   <div class="container" ng-mouseenter="vm.hideStuff()">
     <div class="xpText">
       <p class="text-center"><span>My Experience</span> and passion began 3 years ago. It has led me from first teaching myself basic javascript programming, and on to becoming a bootcamp grad from a tech school from the bay area. I now currently enjoy working freelance and participating in open source projects.</p>
+
+    
     </div>
     <div id='boxes' class="container-fluid">
     	<div layout="row" layout-align='center'class="row">
 
     		<div ng-mouseover="tOff=!tOff"  flex="auto"class="text-center proj xp">
-          <p><a href="#" class="color">Travstate</a></p>
+          <p><a href="#" ui-sref='Travstate' class="color">Travstate</a></p>
             <div ng-class="{trav:tOff}" class="travstate" ng-hide='vm.summary'>
               <p>built using:
               <img id="tPic"src="/img/HTML5_badge.png" alt="HTML badge" width="30"/>
@@ -20,7 +22,7 @@
 
 
     		<div ng-mouseover="mOff=!mOff" flex="auto"class="text-center proj xp" >
-          <p><a href="#" class="color">Mic Doja</a></p>
+          <p><a href="#" ui-sref='MicDoja' class="color">Mic Doja</a></p>
           <div ng-class="{mic:mOff}" class="micdoja" ng-hide='vm.summary'>
             <p>built using:<img id="tPic"src="/img/WordPress_badge.png" alt="WordPress badge" width="30"/> <img id="tPic"src="/img/PHP-logo.png" alt="PHP badge" width="30"/></p>
           </div>
@@ -29,7 +31,7 @@
       <div layout="row" layout-align='center'class="row">
 
     		<div ng-mouseover="bOff=!bOff" flex="auto" class="text-center proj xp">
-          <p><a href="#" class="color">Blog-Nation</a></p>
+          <p><a href="#" ui-sref='Blog'class="color">Blog-Nation</a></p>
           <div ng-class="{blog:bOff}" class="blogs" ng-hide='vm.summary'>
             <p>built using:
               <img id="tPic"src="/img/HTML5_badge.png" alt="HTML badge" width="30"/>
@@ -40,7 +42,7 @@
           </div>
     		</div>
     		<div ng-mouseover="cOff=!cOff" flex="auto" class="text-center proj xp">
-          <p><a href="#" class="color">Chat Time</a></p>
+          <p><a href="#" ui-sref='Chat' class="color">Chat Time</a></p>
           <div ng-class="{chat:cOff}" class="chats" ng-hide='vm.summary'>
             <p>built using:
               <img id="tPic"src="/img/HTML5_badge.png" alt="HTML badge" width="30"/>

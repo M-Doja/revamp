@@ -1,9 +1,20 @@
 var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser');
+var nodemailer = require('nodemailer');
 var app = express();
 var port = process.env.PORT || 3000;
 var mongoose = require('mongoose');
+var smtpTransport = nodemailer.createTransport("SMTP",{
+    secure: true,
+    service: "Gmail",
+    auth: {
+			user: "dojadeveloper@gmail.com",
+			pass: "Patalaska1979"
+			// user: process.env.User_Name,
+			// pass: process.env.User_Password
+    }
+  });
 
 
 app.set('views', path.join(__dirname, 'views'));
@@ -29,7 +40,24 @@ app.get('/', function(req, res) {
 	res.render('index');
 });
 
-app.use('/api/user', UserRoutes);
+app.get('/send',function(req,res){
+    var mailOptions={
+        to : req.query.to,
+        subject : req.query.subject,
+        text : req.query.text
+    }
+    console.log(mailOptions);
+    smtpTransport.sendMail(mailOptions, function(error, response){
+     if(error){
+            console.log(error);
+        res.end("error");
+     }else{
+            console.log("Message sent: " + response.message);
+        res.end("sent");
+         }
+});
+});
+
 
 var server = app.listen(port, function() {
 	var host = server.address().address;

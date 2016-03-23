@@ -1,7 +1,64 @@
 <div ng-controller="HomeController as vm">
-	<h1 id="name"class="text-center">{{vm.Contitle}}</h1>
+	<div class="container text-center mainwrap">
+	  <h1 id="name">{{vm.Contitle}}</h1>
+	  <h2 class="text-center">Contact Info</h2>
+
+	  <div class="row">
+	    <div class="col-md-6" >
+	      <img id="portrait"src="/img/Attachment-1.jpeg" width="370"class='img-responsive'alt="self-portrait" />
+	    </div>
+
+	      <div class="col-md-6 p1">
+
+	        <p id="p1">Ever since I discovered my passion for web developing a few years ago, I've always enjoyed tackling new concepts, projects, and ideas. I love the roller coaster ride of feels you get from programming, from anger from stubborn bugs to sheer uncontrollable bliss when things work how they're supposed to. So if you have a project or an idea feel free to reach out. Even if you just wanna ask random questions, I'm here for ya!</p>
+				<div class="cform">
+					<form class='clearfix' style="background-color:rgba(255,255,255,0.6);max-width:400px;padding:20px;text-align:center;margin:5% auto;font-family:serif;border-radius:10px;">
+						<h1 style="color:black;font-family:serif;">Send Me A Message!</h1>
+						<!-- <input id="from" type="text" placeholder="Enter E-mail ID where you want to send" /><br><br> -->
+						<input id="subject" type="text" placeholder="Subject" /><br><br>
+						<textarea id="text"  placeholder="Please include: (name, number, and contact email)."></textarea><br><br>
+
+						<button class="button"id="send_email" style="color:black">Send Message</button><hr>
+
+						<span id="message"></span>
+					</form>
+				</div>
+
+	      </div>
+
+	  </div>
+
+	</div>
+	<script>// <![CDATA[
+	$(document).ready(function(){
+	    $("#send_email").click(function(){
+	      console.log('log 1');
+	        var from;
+	        var to = "dojadeveloper@gmail.com";
+	        var subject = document.getElementById("subject").value;
+	        var text = document.getElementById("text").value;
+	        console.log(to);
+	        if (text == "" && subject == "") {
+	          console.log('No data entered. Send cancelled');
+	          $("#message").html("<p>There is missing information!</p>");
+	          return;
+	        }
+	        $("#message").html("<p style='color:black;'>Sending Message...Please wait</p>");
+	        $.get("/send",{to:to,subject:subject,text:text},function(data){
+	        if(data=="sent")
+	        {
+	            $("#message").empty().html("<br><br><br><h4 style='color:black;font-family:serif;margin-top:-60px;'>Email has been sent to "+to+" .<br> Thanks for the message! I'll get back to you as soon as I can.</h4>");
+	        }
+	      });
+	      document.getElementById("subject").value = '';
+	      document.getElementById("text").value = '';
+	    });
 
 
-<h2>Contact</h2>
+	});
+	</script>
+
+
+
 
 </div>
